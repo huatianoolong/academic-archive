@@ -1,0 +1,6 @@
+{
+  "name": "Academic Archive",
+  "description": "Personal academic materials portfolio and digital learning archive from Foundation through Degree Year 3.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

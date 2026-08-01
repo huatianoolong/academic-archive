@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-hand {
+    font-family: 'Caveat', cursive, sans-serif;
+  }
+  .font-sketch {
+    font-family: 'Architects Daughter', cursive, sans-serif;
+  }
+  .font-sans {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Paper & Hand-drawn Minimalist Texture */
+.bg-paper {
+  background-color: #FAF7F2;
+  background-image: radial-gradient(#E2DACD 0.75px, transparent 0.75px);
+  background-size: 20px 20px;
+}
+
+.bg-ruled-paper {
+  background-color: #FCFBF7;
+  background-image: linear-gradient(#ECE5D8 1px, transparent 1px);
+  background-size: 100% 28px;
+}
+
+.bg-grid-paper {
+  background-color: #FAF7F2;
+  background-image: 
+    linear-gradient(to right, rgba(210, 200, 185, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(210, 200, 185, 0.25) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Hand-drawn sketchy border simulation */
+.sketch-border {
+  border: 2px solid #2B2825;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+.sketch-border-sm {
+  border: 1.5px solid #33302B;
+  border-radius: 255px 10px 225px 10px/10px 225px 10px 255px;
+}
+
+.sketch-card {
+  background-color: #FFFFFF;
+  border: 1.5px solid #2C2825;
+  box-shadow: 3px 3px 0px #2C2825;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sketch-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #2C2825;
+}
+
+.sketch-btn {
+  border: 1.5px solid #2C2825;
+  box-shadow: 2px 2px 0px #2C2825;
+  transition: all 0.15s ease-out;
+}
+
+.sketch-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3.5px 3.5px 0px #2C2825;
+}
+
+.sketch-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px #2C2825;
+}
+
+/* Handwritten Wavy & Scribble Underlines */
+.scribble-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.scribble-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='6' viewBox='0 0 100 6' preserveAspectRatio='none' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 3C20 0.5 40 5.5 60 2.5C80 -0.5 90 5 100 3' stroke='%23222222' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* Notebook Washi Tape Effect */
+.tape-top {
+  position: relative;
+}
+
+.tape-top::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1.5deg);
+  width: 70px;
+  height: 22px;
+  background-color: rgba(243, 232, 199, 0.7);
+  border: 1px dashed rgba(180, 160, 120, 0.4);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  z-index: 10;
+}
+
+/* Custom scrollbars that look like pencil strokes */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4CDBF;
+  border-radius: 4px;
+  border: 1px solid #FAF7F2;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B3AAA0;
+}
+
